@@ -25,7 +25,7 @@ class ArtMiner {
     this.width = SIZE * 16;
     this.height = SIZE * 9;
 
-    this.delay = rRange(100, 400);
+    this.delay = 400;
 
     this.imageCount = IMAGE_COUNT;
     this.quadrantSizes = [32, 64, 128, 256];

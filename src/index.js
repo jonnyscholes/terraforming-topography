@@ -103,8 +103,9 @@ class ArtMiner {
 
   createBoxes() {
     // 16 32 64 128 256
-    for (let i = fxrand() * 2; i >= 0; i--) this.boxes.push({ w: 256, h: 256 });
-    for (let i = fxrand() * 20; i >= 0; i--)
+    for (let i = fxrand() * 10; i >= 0; i--)
+      this.boxes.push({ w: 256, h: 256 });
+    for (let i = fxrand() * 100; i >= 0; i--)
       this.boxes.push({ w: 128, h: 128 });
     for (let i = fxrand() * 100; i >= 0; i--) this.boxes.push({ w: 64, h: 64 });
     for (let i = fxrand() * 100; i >= 0; i--) this.boxes.push({ w: 32, h: 32 });

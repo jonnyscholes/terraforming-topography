@@ -1,0 +1,45 @@
+{
+  "name": "fxhash-boilerplate-webpack",
+  "version": "1.0.0",
+  "description": "a boilerplate to create a generative token on fxhash",
+  "main": "index.js",
+  "author": "fxhash",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config ./config/webpack.config.prod.js",
+    "start": "webpack serve --config ./config/webpack.config.dev.js"
+  },
+  "dependencies": {
+    "@mapbox/shelf-pack": "^3.2.0",
+    "assert": "^2.0.0",
+    "canvas-to-image": "^2.2.0",
+    "d3-interpolate": "^3.0.1",
+    "download-canvas": "^1.0.2",
+    "lena": "^1.0.0",
+    "motion": "^10.4.0",
+    "ndarray": "^1.0.19",
+    "ndarray-canvas": "^0.0.0",
+    "ndarray-pixel-sort": "^1.0.0",
+    "object-pool": "^0.2.0",
+    "potpack": "^1.0.2",
+    "shelf-pack": "^2.0.1"
+  },
+  "devDependencies": {
+    "adm-zip": "^0.5.9",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^6.4.0",
+    "html-webpack-plugin": "^5.4.0",
+    "style-loader": "^3.3.0",
+    "webpack": "^5.59.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fxhash/fxhash-webpack-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fxhash/fxhash-webpack-boilerplate/issues"
+  },
+  "homepage": "https://github.com/fxhash/fxhash-webpack-boilerplate#readme"
+}

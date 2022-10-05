@@ -103,10 +103,8 @@ class ArtMiner {
 
   createBoxes() {
     // 16 32 64 128 256
-    for (let i = fxrand() * 10; i >= 0; i--)
-      this.boxes.push({ w: 256, h: 256 });
-    for (let i = fxrand() * 100; i >= 0; i--)
-      this.boxes.push({ w: 128, h: 128 });
+    for (let i = 8; i >= 0; i--) this.boxes.push({ w: 256, h: 256 });
+    for (let i = 25; i >= 0; i--) this.boxes.push({ w: 128, h: 128 });
     for (let i = fxrand() * 100; i >= 0; i--) this.boxes.push({ w: 64, h: 64 });
     for (let i = fxrand() * 100; i >= 0; i--) this.boxes.push({ w: 32, h: 32 });
     for (let i = fxrand() * 100; i >= 0; i--) this.boxes.push({ w: 16, h: 16 });
@@ -138,7 +136,10 @@ class ArtMiner {
       return msort(a, b, [max, min, h, w]);
     };
 
-    this.boxes.sort(maxside);
+    this.boxes = this.boxes
+      .map((value) => ({ value, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ value }) => value);
 
     const sprite = new ShelfPack(this.width, this.height);
     this.boxes = sprite.pack(this.boxes);
